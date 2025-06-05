@@ -1,0 +1,614 @@
+/* Modern Minimalist Design - Physiotherapy Clinic */
+
+/* Base Styles */
+:root {
+    --primary: #3a86ff;
+    --light-bg: #f8f9fa;
+    --dark: #212529;
+    --grey: #6c757d;
+    --light-grey: #e9ecef;
+    --white: #ffffff;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--white);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Header Styles */
+.modern-header {
+    background: var(--white);
+    color: var(--dark);
+    padding: 1.5rem 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.header-logo:hover {
+    opacity: 0.8;
+}
+
+.header-logo:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.header-logo .logo {
+    height: 40px;
+    width: auto;
+}
+
+.header-logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.header-logo span {
+    color: var(--primary);
+}
+
+/* Navigation */
+.modern-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.modern-nav a {
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.modern-nav a:hover {
+    color: var(--primary);
+}
+
+.modern-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.modern-nav a:hover::after,
+.modern-nav li.active a::after {
+    width: 100%;
+}
+
+.modern-nav li.active a {
+    color: var(--primary);
+}
+
+/* Main Content Styles */
+main {
+    padding: 3rem 0;
+}
+
+/* Hero Section */
+.hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--light-bg);
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: var(--grey);
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2a75e8;
+}
+
+/* Therapist Profile */
+.therapist-profile {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 3rem;
+}
+
+.profile-header {
+    margin-bottom: 3rem;
+}
+
+.profile-header h2 {
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.divider {
+    height: 3px;
+    width: 60px;
+    background: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.profile-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.profile-image {
+    position: relative;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.profile-details {
+    color: var(--dark);
+}
+
+.detail-item {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.label {
+    font-weight: 600;
+    color: var(--grey);
+    margin-right: 0.5rem;
+}
+
+.bio {
+    margin: 2rem 0;
+    line-height: 1.8;
+}
+
+.bio p {
+    margin-bottom: 1rem;
+}
+
+.appointment-info {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--light-bg);
+    border-radius: 6px;
+}
+
+.contact {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Footer */
+.modern-footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--light-bg);
+    color: var(--grey);
+    font-size: 0.9rem;
+}
+
+/* Home page specific */
+.team-section {
+    padding: 3rem 0;
+}
+
+.team-intro {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.team-photo {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.team-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.team-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.services-list {
+    margin: 2rem 0;
+    list-style: none;
+    padding: 0;
+}
+
+.services-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light-grey);
+    position: relative;
+    padding-left: 2rem;
+    font-size: 1.1rem;
+}
+
+.services-list li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.therapists-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.therapist-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.therapist-card:hover {
+    transform: translateY(-5px);
+}
+
+.therapist-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.therapist-card-content {
+    padding: 1.5rem;
+}
+
+.therapist-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.therapist-card p {
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+
+/* Privacy Policy Styles */
+.privacy-policy {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.policy-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.policy-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.last-updated {
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.policy-content {
+    line-height: 1.7;
+}
+
+.policy-section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--accent-color);
+}
+
+.policy-section h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.policy-section h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.policy-section p {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.policy-section ul {
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.policy-section li {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.policy-section li strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contact-person {
+    background: var(--light-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.contact-person h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.contact-person p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+    .profile-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-image {
+        max-width: 500px;
+        margin: 0 auto 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    
+    .therapist-profile {
+        padding: 1.5rem;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-logo {
+        margin-bottom: 1rem;
+    }
+    
+    .modern-nav ul {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+    
+    .team-intro {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-photo {
+        margin: 0 auto 2rem;
+    }
+    
+    .privacy-policy {
+        padding: 20px 10px;
+    }
+    
+    .policy-header h2 {
+        font-size: 2rem;
+    }
+    
+    .policy-section {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .policy-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .therapists-preview {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Appointment Button Styling */
+.btn-appointment {
+    background-color: #4CAF50;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.btn-appointment:hover {
+    background-color: #45a049;
+}
+
+/* Smaller appointment buttons only on therapist profile pages */
+.therapist-profile .btn-appointment {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Footer Grid Layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.footer-section h4 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--light-grey);
+    text-align: center;
+}
+
+.footer-bottom a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Update modern footer to account for the grid */
+.modern-footer {
+    text-align: left;
+    padding: 2rem 0;
+    background: var(--light-bg);
+    color: var(--grey);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
