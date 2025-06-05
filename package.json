@@ -1,0 +1,23 @@
+{
+  "name": "physiotherapy-clinic-website",
+  "version": "1.0.0",
+  "description": "A simple and modern website for a physiotherapy clinic run by young physiotherapists.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step can be added here'"
+  },
+  "keywords": [
+    "physiotherapy",
+    "clinic",
+    "website",
+    "health",
+    "wellness"
+  ],
+  "author": "Young Physiotherapists",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
