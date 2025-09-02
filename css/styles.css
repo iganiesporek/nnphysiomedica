@@ -387,7 +387,7 @@ main {
 
 .policy-header h2 {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--primary);
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -396,6 +396,59 @@ main {
     color: var(--text-muted);
     font-style: italic;
     margin-top: 10px;
+}
+
+/* Policy switcher */
+.policy-switcher {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.switch-controls {
+    display: inline-flex;
+    background: var(--light-grey);
+    border-radius: 999px;
+    padding: 4px;
+    gap: 4px;
+    box-shadow: var(--shadow);
+}
+
+.switch-btn {
+    border: none;
+    background: transparent;
+    padding: 8px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--grey);
+}
+
+.switch-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+.policy-variant {
+    background: var(--white);
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.policy-section h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-person {
+    flex: 1 1 220px;
 }
 
 .policy-content {
